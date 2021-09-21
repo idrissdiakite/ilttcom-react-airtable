@@ -61,10 +61,12 @@ const Music = () => {
           )
           .map((track) => (
             <article className="track" key={track.id}>
-              <Link to={{
-                pathname: `/track/${track.id}`,
-                state: {tracks: track}
-                }}>
+              <Link
+                to={{
+                  pathname: `/track/${track.id}`,
+                  state: { tracks: track },
+                }}
+              >
                 <img
                   src={track.fields.Artwork}
                   alt={track.fields.Title}
