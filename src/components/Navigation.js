@@ -12,7 +12,9 @@ const Navigation = () => {
     <nav className="nav">
       <div className="nav-center">
         <div className="nav-header">
+        <NavLink exact to="/" activeClassName="nav-active">
         <img src="./../img/logo.png" alt="logo" className="logo" />
+        </NavLink>
           <button 
           className="nav-toggle"
           onClick={triggerToggle}>
