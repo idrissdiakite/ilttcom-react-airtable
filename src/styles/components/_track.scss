@@ -1,0 +1,102 @@
+.single {
+  margin: 0 auto;
+  padding: 6rem 1.5rem 3rem;
+  font-family: $font-1;
+
+  .container {
+    text-align: center;
+
+    img {
+      width: 400px;
+      height: 400px;
+    }
+
+    .details {
+      width: 90%;
+      margin: 0 auto;
+
+      p {
+        margin-bottom: 0.25rem;
+        font-weight: 800;
+        font-size: 1rem;
+      }
+      .artist,
+      .comment {
+        margin-top: 1.5rem;
+      }
+      .comment {
+        max-width: 100%;
+        font-style: italic;
+        line-height: 1.5rem;
+      }
+      span,
+      .comment {
+        font-weight: 500;
+      }
+    }
+  }
+
+  iframe {
+    margin-top: 2rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .single {
+    padding: 7rem 1.5rem 3rem;
+    .container {
+      img {
+        width: 600px;
+        height: 600px;
+      }
+      .details p {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .single {
+    max-width: 1300px;
+    padding: 7rem 2.5rem 4rem;
+    margin: 0 auto;
+
+    .container {
+      display: flex;
+      text-align: left;
+
+      img {
+        width: 500px;
+        height: 500px;
+        margin-right: 2rem;
+      }
+
+      .details {
+        p {
+          font-size: 1.4rem;
+        }
+
+        .comment {
+          max-width: 90%;
+          line-height: 1.7rem;
+        }
+
+        .artist,
+        .comment {
+          margin-top: 3rem;
+        }
+      }
+    }
+    iframe {
+      margin-top: 2rem;
+      height: 580px;
+    }
+  }
+}
+
+@media screen and (min-width: 1444px) {
+  .single {
+    padding: 7rem 3rem 3rem;
+  }
+}

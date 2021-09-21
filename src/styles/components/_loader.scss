@@ -1,0 +1,11 @@
+.loader {
+  height: 100vh;
+  background-color: $color-4;
+
+  img {
+    width: 200px;
+    position: absolute;
+    top: 40%; right: 50%;
+    transform: translate(50%,-50%);
+  }
+}

@@ -1,0 +1,68 @@
+.music {
+  height: auto;
+  min-height: 100vh;
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: 1;
+  grid-template-rows: repeat(auto-fill, 470px);
+  grid-template-rows: repeat(auto-fill, 530px);
+  gap: 1rem 0;
+  justify-content: center;
+
+  .track {
+    width: 100%;
+    text-align: center;
+    font-family: $font-1;
+
+    h3 {
+      font-size: 18px;
+    }
+    p {
+      font-size: 14px;
+    }
+  }
+
+  .track img {
+    height: 470px;
+  }
+
+  .track img:hover {
+    opacity: 0.9;
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .music {
+    width: 90%;
+    max-width: 1300px;
+    grid-template-columns: repeat(auto-fill, 280px);
+    grid-template-rows: repeat(auto-fill, 340px);
+    gap: 1rem 1.5rem;
+
+    .track {
+      width: 280px;
+    }
+
+    .track img {
+      height: 280px;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .music {
+    max-width: 1800px;
+    grid-template-columns: repeat(auto-fill, 380px);
+    grid-template-rows: auto;
+    gap: 1rem 2rem;
+
+    .track {
+      width: 380px;
+    }
+
+    .track img {
+      height: 380px;
+    }
+  }
+}

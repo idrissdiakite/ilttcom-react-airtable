@@ -1,0 +1,125 @@
+.nav {
+  font-family: $font-1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: $color-4;
+  box-shadow: $light-shadow;
+  padding: 0.35rem 1rem;
+  transition: $transition;
+  z-index: 10;
+
+  .logo {
+    height: 50px;
+  }
+
+  /* Nav header */
+  .nav-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+  }
+
+  /* Nav toggle */
+  .nav-toggle {
+    font-size: 1.25rem;
+    color: $color-1;
+    padding-right: 0.25rem;
+    background: transparent;
+    border-color: transparent;
+    transition: $transition;
+    cursor: pointer;
+  }
+
+  .nav-toggle:hover {
+    transform: rotate(90deg);
+    color: $color-2;
+  }
+
+  /* Links */
+
+  .links-container {
+    height: 0;
+    overflow: hidden;
+    transition: $transition;
+  }
+
+  .show-links {
+    height: 100vh;
+  }
+
+  .links {
+    padding: 0.75rem 0;
+  }
+
+  .links a {
+    color: $color-1;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: $spacing;
+    display: block;
+    transition: $transition;
+    font-weight: bold;
+    padding: 0.25rem;
+  }
+
+  .links a:nth-child(1) {
+    padding: 0.5rem 0;
+  }
+
+  .links a:hover {
+    color: $color-2;
+    padding-left: 0.5rem;
+  }
+
+  @media screen and (min-width: 768px) {
+    .nav {
+      height: auto;
+      padding: 0.25 1.5rem;
+    }
+    .nav-center {
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      max-width: 1250px;
+      padding: 0 0.5rem;
+    }
+    .nav-header {
+      padding: 0 0.75rem;
+    }
+    .nav-toggle {
+      display: none;
+    }
+    .links-container {
+      height: auto !important;
+    }
+    .links {
+      display: flex;
+      padding: 0.75rem 0;
+    }
+    .links a {
+      color: $color-1;
+      letter-spacing: $spacing;
+      display: block;
+      transition: $transition;
+      margin: 0 0.5rem;
+    }
+    .links a:hover {
+      color: $color-2;
+      padding-left: 0;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .nav {
+    .nav-center {
+      max-width: 1250px;
+    }
+    .logo {
+      margin-right: 1rem;
+    }
+  }
+}

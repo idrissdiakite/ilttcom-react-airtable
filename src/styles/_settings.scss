@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css?family=Fjalla+One|Roboto:400,700&display=swap");
+
+$font-1: "Roboto", sans-serif;
+$font-2: "Fjalla One", sans-serif;
+
+
+$color-1: hsl(210, 36%, 96%);
+$color-2: #FFFF00;
+$color-3: #222;
+$color-4: #000;
+
+$transition: all 0.3s linear;
+$spacing: 0.1rem;
+$radius: 0.25rem;
+$light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
