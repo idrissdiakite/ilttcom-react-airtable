@@ -7,7 +7,7 @@ Application musicale réalisée avec React, Airtable pour la base de donnée et 
 ## 🚀 Installation
 
 1. git clone ou télécharger le projet
-2. dans **`src/assets`**, récupérer le fichier **ilovethistrack.com.csv** (base de donnée Airtable utilisé pour le projet)
+2. dans **`src/assets`**, récupérer le fichier **ilovethistrack.com.csv** (base de donnée Airtable utilisée pour le projet)
 3. créer un compte sur [Airtable](https://drive.google.com/file/d/1CgASOopJozOfaHEMDn0A0qFuaH1kZ6Lc) (si ce n'est pas déjà fait) 
 4. importer le fichier csv afin de créer une nouvelle base de donnée (cf. "add data to new table")
 5. se rendre sur l'[API d'Airtable](https://airtable.com/api) et selectionner la base nouvellement créée
