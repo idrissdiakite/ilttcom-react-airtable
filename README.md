@@ -7,6 +7,7 @@ Application musicale réalisée avec React, Airtable (en guise de base de donné
 - création de routes dynamiques (basées sur l'ID) permettant d'afficher les données d'un seul morceau (cf. "Record")
 - mise en place d'un preloader permettant de charger les pages avant de les afficher
 - ajout d'un favicon personnalisé
+- gestion du responsive mobile, tablette et big screen
 
 
 ![Screenshot](screenshot.png)
