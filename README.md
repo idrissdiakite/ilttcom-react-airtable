@@ -1,4 +1,4 @@
-# ilovethistrack.com (React + SCSS + Airtable)
+# ilovethistrack.com (React + Airtable + SCSS + Framer Motion)
 
 Application musicale réalisée avec React, Airtable (en guise de base de donnée) et SCSS (pour la mise en forme).
 - création d'une base de donnée via Airtable
