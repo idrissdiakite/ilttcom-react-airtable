@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const Music = () => {
   const [tracks, setTracks] = useState([]);
@@ -33,7 +34,14 @@ const Music = () => {
   }, [tracks, playOnce]);
 
   return (
-    <>
+    <motion.div
+      className="row"
+      initial="initial"
+      animate="in"
+      exit="out"
+      variants={pageVariants}
+      transition={pageTransition}
+    >
       <div className="filters">
         {genres.map((genre) => {
           return (
@@ -79,8 +87,32 @@ const Music = () => {
             </article>
           ))}
       </div>
-    </>
+    </motion.div>
   );
 };
+
+  // Motion
+  const pageVariants = {
+    initial: {
+      opacity: 0,
+      scale: 0.8
+    },
+    in: {
+      opacity: 1,
+      x: 0,
+      scale: 1
+    },
+    out: {
+      opacity: 0,
+      x: "100vw",
+      scale: 1.2
+    }
+  };
+  
+  const pageTransition = {
+    type: "tween",
+    ease: "anticipate",
+    duration: 0.8
+  };
 
 export default Music;

@@ -1,25 +1,23 @@
-import React, {useState, useEffect} from "react";
-import Loader from "../components/Loader";
+import React from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import { useLocation } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const Track = () => {
-  const [loader, setLoader] = useState(true);
   const { state } = useLocation();
   const track = state.tracks.fields;
   // console.log(track)
 
-  useEffect(() => {
-    setTimeout(() => {
-      setLoader(false);
-    }, 1500)
-  }, [])
-
-  return loader ? (
-    <Loader />
-    ) : (
-    <>
+  return (
+      <motion.div
+      className="row"
+      initial="initial"
+      animate="in"
+      exit="out"
+      variants={pageVariants}
+      transition={pageTransition}
+    >
       <Navigation />
 
       <section className="single">
@@ -43,6 +41,7 @@ const Track = () => {
             <p className="comment">« {track.Comment} »</p>
           </div>
         </div>
+        <p align="center">
         <iframe
           title={state.tracks.id}
           width="100%"
@@ -52,11 +51,36 @@ const Track = () => {
           allow="autoplay"
           src={track.Link}
         ></iframe>
+        </p>
       </section>
 
       <Footer />
-    </>
+    </motion.div>
   );
 };
+
+  // Motion
+  const pageVariants = {
+    initial: {
+      opacity: 0,
+      scale: 0.8
+    },
+    in: {
+      opacity: 1,
+      x: 0,
+      scale: 1
+    },
+    out: {
+      opacity: 0,
+      x: "100vw",
+      scale: 1.2
+    }
+  };
+  
+  const pageTransition = {
+    type: "tween",
+    ease: "anticipate",
+    duration: 0.8
+  };
 
 export default Track;
