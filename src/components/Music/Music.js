@@ -1,7 +1,8 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import Filter from "./Filter";
+import Article from "./Article";
 require("dotenv").config();
 
 // console.log(process.env)
@@ -15,13 +16,13 @@ const Music = () => {
   useEffect(() => {
     const api_key = process.env.REACT_APP_API_KEY;
 
-      axios
-        .get(
-          `https://api.airtable.com/v0/app0YqOZKz4O6SUZa/ilovethistrack.com?api_key=${api_key}`
-        )
-        .then((res) => {
-          setTracks(res.data.records);
-        });
+    axios
+      .get(
+        `https://api.airtable.com/v0/app0YqOZKz4O6SUZa/ilovethistrack.com?api_key=${api_key}`
+      )
+      .then((res) => {
+        setTracks(res.data.records);
+      });
 
     // Je trie les morceaux par date d'ajout
     const sortedTracks = () => {
@@ -45,18 +46,7 @@ const Music = () => {
     >
       <div className="filters">
         {genres.map((genre) => {
-          return (
-            <button
-              type="button"
-              id={genre}
-              key={genre}
-              value={genre}
-              onClick={(e) => setSelectedGenre(e.currentTarget.value)}
-              className="filter-btn"
-            >
-              {genre}
-            </button>
-          );
+          return <Filter genre={genre} setSelectedGenre={setSelectedGenre} />;
         })}
       </div>
 
@@ -69,23 +59,7 @@ const Music = () => {
               track.fields.Genre.includes(selectedGenre)
           )
           .map((track) => (
-            <article className="track" key={track.id}>
-              <Link
-                to={{
-                  pathname: `/track/${track.id}`,
-                  state: { tracks: track },
-                }}
-              >
-                <img
-                  src={track.fields.Artwork}
-                  alt={track.fields.Title}
-                  className="cover"
-                />
-              </Link>
-              <h3>{track.fields.Artist}</h3>
-              <p>{track.fields.Title}</p>
-              <p>{track.fields.Date}</p>
-            </article>
+            <Article track={track} key={track.id}/>
           ))}
       </div>
     </motion.div>

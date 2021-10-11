@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import Loader from "../components/Loader";
 import Footer from "../components/Footer";
-import Music from "../components/Music";
+import Music from "../components/Music/Music";
 import Navigation from "../components/Navigation";
 
 const Home = () => {
