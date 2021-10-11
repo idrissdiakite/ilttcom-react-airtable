@@ -9,23 +9,19 @@ require("dotenv").config();
 const Music = () => {
   const [tracks, setTracks] = useState([]);
   const [sortedData, setSortedData] = useState([]);
-  const [playOnce, setPlayOnce] = useState(true);
   const [selectedGenre, setSelectedGenre] = useState("");
   const genres = ["All", ...new Set(tracks.map((track) => track.fields.Genre))];
 
   useEffect(() => {
     const api_key = process.env.REACT_APP_API_KEY;
 
-    if (playOnce) {
       axios
         .get(
           `https://api.airtable.com/v0/app0YqOZKz4O6SUZa/ilovethistrack.com?api_key=${api_key}`
         )
         .then((res) => {
           setTracks(res.data.records);
-          setPlayOnce(false);
         });
-    }
 
     // Je trie les morceaux par date d'ajout
     const sortedTracks = () => {
@@ -36,7 +32,7 @@ const Music = () => {
       setSortedData(sortedArray);
     };
     sortedTracks();
-  }, [tracks, playOnce]);
+  }, [tracks]);
 
   return (
     <motion.div
