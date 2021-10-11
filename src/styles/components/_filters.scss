@@ -26,9 +26,11 @@
 }
 
 @media screen and (min-width: 800px) { 
-  .filter-btn {
-    font-size: 0.75rem;
-    padding: 0.5rem 0.75rem;
-    margin: 5px;
+  .filters {
+    .filter-btn {
+      font-size: 0.8rem;
+      padding: 0.6rem 0.7rem;
+      margin: 5px;
+    }
   }
 }
