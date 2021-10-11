@@ -2,6 +2,9 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+require("dotenv").config();
+
+// console.log(process.env)
 
 const Music = () => {
   const [tracks, setTracks] = useState([]);
@@ -11,10 +14,12 @@ const Music = () => {
   const genres = ["All", ...new Set(tracks.map((track) => track.fields.Genre))];
 
   useEffect(() => {
+    const api_key = process.env.REACT_APP_API_KEY;
+
     if (playOnce) {
       axios
         .get(
-          "https://api.airtable.com/v0/app0YqOZKz4O6SUZa/ilovethistrack.com?api_key=keylkmCAGC4x0tDyq"
+          `https://api.airtable.com/v0/app0YqOZKz4O6SUZa/ilovethistrack.com?api_key=${api_key}`
         )
         .then((res) => {
           setTracks(res.data.records);

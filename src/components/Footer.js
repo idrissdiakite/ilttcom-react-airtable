@@ -11,27 +11,27 @@ const Footer = () => {
           <ul>
             <li>
               <a href="https://www.facebook.com/ilttcom">
-                <i class="fab fa-facebook-f"></i>
+                <i className="fab fa-facebook-f"></i>
               </a>
             </li>
             <li>
               <a href="https://www.instagram.com/ilttcom">
-                <i class="fab fa-instagram"></i>
+                <i className="fab fa-instagram"></i>
               </a>
             </li>
             <li>
               <a href="https://www.twitter.com/ilttcom">
-                <i class="fab fa-twitter"></i>
+                <i className="fab fa-twitter"></i>
               </a>
             </li>
             <li>
               <a href="https://open.spotify.com/user/ilovethistrack.com?si=153a9d0a068a4c14">
-                <i class="fab fa-spotify"></i>
+                <i className="fab fa-spotify"></i>
               </a>
             </li>
             <li>
               <a href="https://www.soundcloud.com/ilttcom">
-                <i class="fab fa-soundcloud"></i>
+                <i className="fab fa-soundcloud"></i>
               </a>
             </li>
           </ul>
