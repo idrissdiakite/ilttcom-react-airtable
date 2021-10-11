@@ -1,13 +1,8 @@
 .music {
   height: auto;
   min-height: 100vh;
-  margin: 2rem auto;
-  display: grid;
-  grid-template-columns: 1;
-  grid-template-rows: repeat(auto-fill, 470px);
-  grid-template-rows: repeat(auto-fill, 530px);
-  gap: 1rem 0;
-  justify-content: center;
+  max-width: 100%;
+  margin: 2rem 0.5rem;
 
   .track {
     width: 100%;
@@ -23,7 +18,7 @@
   }
 
   .track img {
-    height: 470px;
+    height: 350px;
   }
 
   .track img:hover {
@@ -35,7 +30,10 @@
 @media screen and (min-width: 768px) {
   .music {
     width: 90%;
+    margin: 1.5rem auto;
     max-width: 1300px;
+    display: grid;
+    justify-content: center;
     grid-template-columns: repeat(auto-fill, 280px);
     grid-template-rows: repeat(auto-fill, 340px);
     gap: 1rem 1.5rem;
@@ -50,7 +48,25 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
+  .music {
+    width: 90%;
+    max-width: 1300px;
+    grid-template-columns: repeat(auto-fill, 330px);
+    grid-template-rows: repeat(auto-fill, 370px);
+    gap: 1rem 1.75rem;
+
+    .track {
+      width: 330px;
+    }
+
+    .track img {
+      height: 330px;
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
   .music {
     max-width: 1800px;
     grid-template-columns: repeat(auto-fill, 380px);

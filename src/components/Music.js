@@ -14,7 +14,7 @@ const Music = () => {
     if (playOnce) {
       axios
         .get(
-          "https://api.airtable.com/v0/app0YqOZKz4O6SUZa/ilovethistrack.com?api_key="
+          "https://api.airtable.com/v0/app0YqOZKz4O6SUZa/ilovethistrack.com?api_key=keylkmCAGC4x0tDyq"
         )
         .then((res) => {
           setTracks(res.data.records);
@@ -91,28 +91,28 @@ const Music = () => {
   );
 };
 
-  // Motion
-  const pageVariants = {
-    initial: {
-      opacity: 0,
-      scale: 0.8
-    },
-    in: {
-      opacity: 1,
-      x: 0,
-      scale: 1
-    },
-    out: {
-      opacity: 0,
-      x: "100vw",
-      scale: 1.2
-    }
-  };
-  
-  const pageTransition = {
-    type: "tween",
-    ease: "anticipate",
-    duration: 0.8
-  };
+// Motion
+const pageVariants = {
+  initial: {
+    opacity: 0,
+    scale: 0.8,
+  },
+  in: {
+    opacity: 1,
+    x: 0,
+    scale: 1,
+  },
+  out: {
+    opacity: 0,
+    x: "100vw",
+    scale: 1.2,
+  },
+};
+
+const pageTransition = {
+  type: "tween",
+  ease: "anticipate",
+  duration: 0.8,
+};
 
 export default Music;
