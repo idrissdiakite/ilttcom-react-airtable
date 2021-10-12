@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 const Article = (props) => {
     const {track} = props;
+    
     return (
             <article className="track" key={track.id}>
               <Link

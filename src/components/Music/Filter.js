@@ -4,7 +4,6 @@ const Filter = (props) => {
     const {genre, setSelectedGenre} = props;
 
   return (
-    <>
       <button
         type="button"
         id={genre}
@@ -15,7 +14,6 @@ const Filter = (props) => {
       >
         {genre}
       </button>
-    </>
   );
 };
 
