@@ -29,6 +29,11 @@ const Navigation = () => {
                 ilovethistrack.com
               </NavLink>
             </li>
+            <li>
+              <NavLink exact to="/gallerie" activeClassName="nav-active">
+                Gallerie
+              </NavLink>
+            </li>
           </ul>
         </div>
       </div>
