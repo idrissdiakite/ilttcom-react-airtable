@@ -8,8 +8,8 @@
     text-align: center;
 
     img {
-      width: 340px;
-      height: 340px;
+      width: 320px;
+      height: 320px;
     }
 
     img:hover {
@@ -46,6 +46,15 @@
     margin-top: 2rem;
     display: block;
   }
+
+  .back p {
+    color: $color-4;
+    text-align: center;
+    margin-top: 2rem;
+  }
+  .back p:hover {
+    font-weight: 600;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -65,7 +74,6 @@
 
 @media screen and (min-width: 1024px) {
   .single {
-    max-width: 1700px;
     padding: 7rem 2.5rem 4rem;
     margin: 0 auto;
 
@@ -74,8 +82,8 @@
       text-align: left;
 
       img {
-        width: 500px;
-        height: 500px;
+        width: 400px;
+        height: 400px;
         margin-right: 2rem;
       }
 
@@ -97,13 +105,30 @@
     }
     iframe {
       margin-top: 2rem;
-      height: 580px;
+      height: 400px;
+    }
+    .back p {
+      margin-top: 3rem;
     }
   }
 }
 
-@media screen and (min-width: 1444px) {
+@media screen and (min-width: 1280px) {
   .single {
+    max-width: 1700px;
     padding: 7rem 3rem 3rem;
+
+    .container img {
+        width: 500px;
+        height: 500px;
+    }
+
+    iframe {
+      margin-top: 2rem;
+      height: 600px;
+    }
+    .back p {
+      margin-top: 2.5rem;
+    }
   }
 }

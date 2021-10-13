@@ -1,7 +1,7 @@
 import React from "react";
+import { Link, useLocation } from "react-router-dom";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
-import { useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 
 const Track = () => {
@@ -10,7 +10,7 @@ const Track = () => {
   // console.log(track)
 
   return (
-      <motion.div
+    <motion.div
       className="row"
       initial="initial"
       animate="in"
@@ -22,7 +22,7 @@ const Track = () => {
 
       <section className="single">
         <div className="container">
-          <img src={track.Artwork} alt="" />
+          <img src={track.Artwork} alt="Artwork" />
 
           <div className="details">
             <p className="artist">
@@ -42,16 +42,23 @@ const Track = () => {
           </div>
         </div>
         <p align="center">
-        <iframe
-          title={state.tracks.id}
-          width="100%"
-          height="450"
-          scrolling="no"
-          frameborder="no"
-          allow="autoplay"
-          src={track.Link}
-        ></iframe>
+          <iframe
+            title={state.tracks.id}
+            width="100%"
+            height="450"
+            scrolling="no"
+            frameBorder="no"
+            allow="autoplay"
+            src={track.Link}
+          ></iframe>
         </p>
+
+        <div className="back">
+        <Link to="/">
+          <p>Retourner à l'accueil</p>
+          </Link>
+        </div>
+
       </section>
 
       <Footer />
@@ -59,28 +66,28 @@ const Track = () => {
   );
 };
 
-  // Motion
-  const pageVariants = {
-    initial: {
-      opacity: 0,
-      scale: 0.8
-    },
-    in: {
-      opacity: 1,
-      x: 0,
-      scale: 1
-    },
-    out: {
-      opacity: 0,
-      x: "100vw",
-      scale: 1.2
-    }
-  };
-  
-  const pageTransition = {
-    type: "tween",
-    ease: "anticipate",
-    duration: 0.8
-  };
+// Motion
+const pageVariants = {
+  initial: {
+    opacity: 0,
+    scale: 0.7,
+  },
+  in: {
+    opacity: 1,
+    x: 0,
+    scale: 1,
+  },
+  out: {
+    opacity: 0,
+    x: "100vw",
+    scale: 1.2,
+  },
+};
+
+const pageTransition = {
+  type: "tween",
+  ease: "anticipate",
+  duration: 1,
+};
 
 export default Track;

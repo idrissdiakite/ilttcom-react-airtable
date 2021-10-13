@@ -18,7 +18,7 @@
   }
 
   .track img {
-    max-width: 100%;
+    width: 100%;
   }
 
   .track img:hover {
@@ -36,7 +36,7 @@
     justify-content: center;
     grid-template-columns: repeat(auto-fill, 280px);
     grid-template-rows: repeat(auto-fill, 340px);
-    gap: 1rem 1.5rem;
+    gap: 1.5rem 1.5rem;
 
     .track {
       width: 280px;
