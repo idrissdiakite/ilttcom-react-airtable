@@ -4,9 +4,10 @@ const Footer = () => {
   return (
     <>
       <footer>
-      <div className="container">
+        <div className="container">
           <p>
-            ilovethistrack.com - îlot de qualité sonore dans un océan d'indigences phoniques ©
+            ilovethistrack.com - îlot de qualité sonore dans un océan
+            d'indigences phoniques ©
           </p>
           <ul>
             <li>
@@ -35,7 +36,7 @@ const Footer = () => {
               </a>
             </li>
           </ul>
-          </div>
+        </div>
       </footer>
     </>
   );
