@@ -44,8 +44,8 @@ const Music = () => {
       initial="initial"
       animate="in"
       exit="out"
-      variants={pageVariants}
-      transition={pageTransition}
+      variants={variants}
+      transition={transition}
     >
       <div className="filters">
         {genres.map((genre) => {
@@ -70,7 +70,7 @@ const Music = () => {
 };
 
 // Motion
-const pageVariants = {
+const variants = {
   initial: {
     opacity: 0,
     scale: 0.8,
@@ -83,11 +83,11 @@ const pageVariants = {
   out: {
     opacity: 0,
     x: "100vw",
-    scale: 1.2,
+    scale: 1.5,
   },
 };
 
-const pageTransition = {
+const transition = {
   type: "tween",
   ease: "anticipate",
   duration: 0.8,

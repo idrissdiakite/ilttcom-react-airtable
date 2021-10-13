@@ -19,19 +19,29 @@ const Image = () => {
   }, [setImages]);
 
   return (
-    <motion.div 
-    className="gallery"
-    initial="initial"
+    <motion.div
+      className="gallery"
+      initial="initial"
       animate="in"
       exit="out"
       variants={pageVariants}
-      transition={pageTransition}>
+      transition={pageTransition}
+    >
       {images.map((image) => (
-        <img
-          src={image.fields.Attachments[0].url}
-          alt={image.fields.Name}
-          key={image.id}
-        />
+        <div class="container">
+          <div class="image">
+            <img
+              src={image.fields.Attachments[0].url}
+              alt={image.fields.Name}
+              key={image.id}
+            />
+          </div>
+          <div class="image-hover">
+            <div class="text-hover">
+              <span class="text-title">{image.fields.Name}</span>
+            </div>
+          </div>
+        </div>
       ))}
     </motion.div>
   );
