@@ -1,5 +1,5 @@
-import axios from "axios";
 import React, { useEffect, useState } from "react";
+import axios from "axios";
 import { motion } from "framer-motion";
 import Filter from "./Filter";
 import Article from "./Article";

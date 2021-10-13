@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import Loader from "../components/Loader";
 import Footer from "../components/Footer";
 import Music from "../components/Music/Music";
@@ -10,15 +10,17 @@ const Home = () => {
   useEffect(() => {
     setTimeout(() => {
       setLoader(false);
-    }, 1500)
-  }, [])
+    }, 1500);
+  }, []);
 
   return loader ? (
     <Loader />
-    ) : (
+  ) : (
     <>
       <Navigation />
-      <Music />
+      <section>
+        <Music />
+      </section>
       <Footer />
     </>
   );
