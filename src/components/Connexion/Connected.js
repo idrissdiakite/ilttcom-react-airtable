@@ -13,7 +13,7 @@ const Connected = () => {
       <Navigation />
       <section className="connected">
         <div className="container">
-          <h2>Bonjour {firebase.auth().currentUser.displayName} <br /> vous êtres connecté !</h2>
+          <h2>{firebase.auth().currentUser.displayName}, <br /> vous êtres déjà connecté !</h2>
           <div>
           <button className="button" onClick={signOut}>Se déconnecter</button>
           </div>

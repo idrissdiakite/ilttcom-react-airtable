@@ -1,32 +1,50 @@
 .login,
 .connected {
-  height: 93vh;
+  height: 94vh;
   text-align: center;
+  display: grid;
+  padding-top: 20%;
   background-color: $color-1;
 
   h2 {
-      margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
+
+    i {
+      margin-top: 1rem;
+    }
   }
 
   button {
+    @include button;
+  }
+}
+
+.login {
+  button {
     width: 250px;
-    margin-bottom: 1rem;
-    padding: 1rem 1.5rem;
-    cursor: pointer;
     color: $color-1;
-    border: none;
-    text-decoration: none;
-    background-color: $color-4;
-    text-transform: uppercase;
-    font-family: $font-2;
     font-size: 2rem;
-    transition: $transition;
+    padding: 1rem 1.5rem;
+    background-color: $color-4;
   }
 
   button:hover {
-      border: 1px solid $color-4;
-      color: $color-4;
-      background-color: transparent;
+    color: $color-4;
+    background-color: transparent;
+    border: 1px solid $color-4;
+  }
+}
 
+.connected {
+  button {
+    width: 150px;
+    color: $color-1;
+    font-size: 1rem;
+    padding: 0.75rem;
+    background-color: $color-4;
+  }
+
+  button:hover {
+    color: $color-2;
   }
 }

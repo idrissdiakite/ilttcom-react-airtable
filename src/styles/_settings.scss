@@ -3,7 +3,6 @@
 $font-1: "Roboto", sans-serif;
 $font-2: "Fjalla One", sans-serif;
 
-
 $color-1: hsl(210, 36%, 96%);
 $color-2: #FFFF00;
 $color-3: #222;
@@ -13,6 +12,18 @@ $transition: all 0.3s linear;
 $spacing: 0.1rem;
 $radius: 0.25rem;
 $light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+@mixin button {
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+    color: $color-1;
+    border: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: $font-2;
+    transition: $transition;
+    box-shadow: $light-shadow;
+}
 
 *,
 ::after,
