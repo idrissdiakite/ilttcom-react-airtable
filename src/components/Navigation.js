@@ -32,6 +32,11 @@ const Navigation = () => {
                 Gallerie
               </NavLink>
             </li>
+            <li>
+              <NavLink exact to="/connexion" activeClassName="nav-active">
+                Connexion
+              </NavLink>
+            </li>
           </ul>
         </div>
       </div>

@@ -1,0 +1,32 @@
+.login,
+.connected {
+  height: 93vh;
+  text-align: center;
+  background-color: $color-1;
+
+  h2 {
+      margin-bottom: 2rem;
+  }
+
+  button {
+    width: 250px;
+    margin-bottom: 1rem;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    color: $color-1;
+    border: none;
+    text-decoration: none;
+    background-color: $color-4;
+    text-transform: uppercase;
+    font-family: $font-2;
+    font-size: 2rem;
+    transition: $transition;
+  }
+
+  button:hover {
+      border: 1px solid $color-4;
+      color: $color-4;
+      background-color: transparent;
+
+  }
+}
