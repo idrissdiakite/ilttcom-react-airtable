@@ -18,7 +18,7 @@ const Login = () => {
   if (isSignedIn === true) {
     return (
       <span className="login-container">
-      <Connected />
+      <Connected/>
       </span>
     );
   } 

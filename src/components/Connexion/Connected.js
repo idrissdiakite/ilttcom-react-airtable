@@ -8,6 +8,7 @@ const Connected = () => {
     const signOut= () => {
         firebase.auth().signOut();
     }
+
   return (
     <>
       <Navigation />

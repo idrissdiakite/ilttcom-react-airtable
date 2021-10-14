@@ -37,7 +37,6 @@ const Signin = () => {
       <Navigation />
       <section className="login">
         <div className="container">
-        <h1>Pas encore de compte ? </h1>
           <h2>Connexion <br /> <i class="fas fa-long-arrow-alt-down"></i></h2>
           <button onClick={signInWithGoogle}>Google</button> <br />
           <button onClick={signInWithFacebook}>

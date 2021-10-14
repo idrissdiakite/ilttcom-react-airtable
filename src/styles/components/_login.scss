@@ -3,7 +3,7 @@
   height: 94vh;
   text-align: center;
   display: grid;
-  padding-top: 20%;
+  padding-top: 30%;
   background-color: $color-1;
 
   h2 {
@@ -47,4 +47,11 @@
   button:hover {
     color: $color-2;
   }
+}
+
+@media screen and (min-width: 1024px) {
+  .login,
+.connected {
+  padding-top: 10%;
+}
 }
