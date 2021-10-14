@@ -11,12 +11,11 @@ const Track = () => {
 
   return (
     <motion.div
-      className="row"
       initial="initial"
       animate="in"
       exit="out"
-      variants={pageVariants}
-      transition={pageTransition}
+      variants={variants}
+      transition={transition}
     >
       <Navigation />
 
@@ -50,6 +49,7 @@ const Track = () => {
             frameBorder="no"
             allow="autoplay"
             src={track.Link}
+            loading="lazy"
           ></iframe>
         </p>
 
@@ -67,14 +67,15 @@ const Track = () => {
 };
 
 // Motion
-const pageVariants = {
+const variants = {
   initial: {
     opacity: 0,
-    scale: 0.7,
+    scale: 1,
+    y: -100,
   },
   in: {
     opacity: 1,
-    x: 0,
+    y: 0,
     scale: 1,
   },
   out: {
@@ -84,10 +85,10 @@ const pageVariants = {
   },
 };
 
-const pageTransition = {
+const transition = {
   type: "tween",
   ease: "anticipate",
-  duration: 1,
+  duration: 1.5,
 };
 
 export default Track;

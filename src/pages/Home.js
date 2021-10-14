@@ -16,13 +16,13 @@ const Home = () => {
   return loader ? (
     <Loader />
   ) : (
-    <>
+    <div>
       <Navigation />
       <section>
         <Music />
       </section>
       <Footer />
-    </>
+    </div>
   );
 };
 

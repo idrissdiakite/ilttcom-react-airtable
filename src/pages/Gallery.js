@@ -11,8 +11,8 @@ const Gallery = () => {
     initial="initial"
       animate="in"
       exit="out"
-      variants={pageVariants}
-      transition={pageTransition}>
+      variants={variants}
+      transition={transition}>
       <Navigation />
       <section>
       <Image />
@@ -23,7 +23,7 @@ const Gallery = () => {
 };
 
 // Motion
-const pageVariants = {
+const variants = {
   initial: {
     opacity: 0,
     scale: 1,
@@ -41,7 +41,7 @@ const pageVariants = {
   },
 };
 
-const pageTransition = {
+const transition = {
   type: "tween",
   ease: "anticipate",
   duration: 1.5,

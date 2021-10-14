@@ -24,8 +24,8 @@ const Image = () => {
       initial="initial"
       animate="in"
       exit="out"
-      variants={pageVariants}
-      transition={pageTransition}
+      variants={variants}
+      transition={transition}
     >
       {images.map((image) => (
         <div class="container">
@@ -34,6 +34,7 @@ const Image = () => {
               src={image.fields.Attachments[0].url}
               alt={image.fields.Name}
               key={image.id}
+              loading="lazy"
             />
           </div>
           <div class="image-hover">
@@ -48,7 +49,7 @@ const Image = () => {
 };
 
 // Motion
-const pageVariants = {
+const variants = {
   initial: {
     opacity: 0,
     scale: 0.8,
@@ -65,7 +66,7 @@ const pageVariants = {
   },
 };
 
-const pageTransition = {
+const transition = {
   type: "tween",
   ease: "anticipate",
   duration: 1.5,
