@@ -3,10 +3,10 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
+import Connected from "./components/Connexion/Connected";
 import Track from "./pages/Track";
 import Gallery from "./pages/Gallery";
 import NotFound from "./pages/NotFound";
-import Connected from "./components/Connexion/Connected";
 
 function App() {
 
