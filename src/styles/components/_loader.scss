@@ -5,13 +5,15 @@
   img {
     width: 200px;
     position: absolute;
-    top: 45%; right: 45%;
-    transform: translate(50%,-50%);
+    top: 45%;
+    right: 45%;
+    transform: translate(50%, -50%);
   }
 }
 
 @media screen and (min-width: 768px) {
   .loader img {
-    top: 40%; right: 50%;
+    top: 40%;
+    right: 50%;
   }
 }

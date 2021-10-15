@@ -46,15 +46,15 @@
     margin-top: 2rem;
     display: block;
   }
+}
 
-  .back p {
-    color: $color-4;
-    text-align: center;
-    margin-top: 2rem;
-  }
-  .back p:hover {
-    font-weight: 600;
-  }
+.back p {
+  color: $color-4;
+  text-align: center;
+  margin-top: 2rem;
+}
+.back p:hover {
+  font-weight: 600;
 }
 
 @media screen and (min-width: 768px) {
@@ -119,8 +119,8 @@
     padding: 7rem 3rem 3rem;
 
     .container img {
-        width: 500px;
-        height: 500px;
+      width: 500px;
+      height: 500px;
     }
 
     iframe {

@@ -5,17 +5,17 @@ import Footer from "../components/Footer";
 import Image from "../components/Image";
 
 const Gallery = () => {
-
   return (
     <motion.div
-    initial="initial"
+      initial="initial"
       animate="in"
       exit="out"
       variants={variants}
-      transition={transition}>
+      transition={transition}
+    >
       <Navigation />
       <section>
-      <Image />
+        <Image />
       </section>
       <Footer />
     </motion.div>

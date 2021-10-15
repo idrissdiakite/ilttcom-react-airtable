@@ -13,7 +13,6 @@ const Track = () => {
     <motion.div
       initial="initial"
       animate="in"
-      exit="out"
       variants={variants}
       transition={transition}
     >
@@ -54,11 +53,10 @@ const Track = () => {
         </p>
 
         <div className="back">
-        <Link to="/">
-          <p>Retourner à l'accueil</p>
+          <Link to="/">
+            <p>Retourner à l'accueil</p>
           </Link>
         </div>
-
       </section>
 
       <Footer />
@@ -77,11 +75,6 @@ const variants = {
     opacity: 1,
     y: 0,
     scale: 1,
-  },
-  out: {
-    opacity: 0,
-    x: "100vw",
-    scale: 1.2,
   },
 };
 

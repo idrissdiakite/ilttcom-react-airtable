@@ -4,7 +4,7 @@ $font-1: "Roboto", sans-serif;
 $font-2: "Fjalla One", sans-serif;
 
 $color-1: hsl(210, 36%, 96%);
-$color-2: #FFFF00;
+$color-2: #ffff00;
 $color-3: #222;
 $color-4: #000;
 
@@ -14,15 +14,15 @@ $radius: 0.25rem;
 $light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 
 @mixin button {
-    margin-bottom: 1.5rem;
-    cursor: pointer;
-    color: $color-1;
-    border: none;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-family: $font-2;
-    transition: $transition;
-    box-shadow: $light-shadow;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+  color: $color-1;
+  border: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: $font-2;
+  transition: $transition;
+  box-shadow: $light-shadow;
 }
 
 *,
@@ -33,15 +33,15 @@ $light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
 }
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 ul {
-    list-style-type: none;
+  list-style-type: none;
 }
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 section {
-    padding-top: 6.25rem;
+  padding-top: 6.25rem;
 }

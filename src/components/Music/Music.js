@@ -18,14 +18,14 @@ const Music = () => {
     const api_key = process.env.REACT_APP_API_KEY;
 
     if (playOnce) {
-    axios
-      .get(
-        `https://api.airtable.com/v0/app0YqOZKz4O6SUZa/ilovethistrack.com?api_key=${api_key}`
-      )
-      .then((res) => {
-        setTracks(res.data.records);
-        setPlayOnce(false);
-      });
+      axios
+        .get(
+          `https://api.airtable.com/v0/app0YqOZKz4O6SUZa/ilovethistrack.com?api_key=${api_key}`
+        )
+        .then((res) => {
+          setTracks(res.data.records);
+          setPlayOnce(false);
+        });
     }
     // Je trie les morceaux par date d'ajout
     const sortedTracks = () => {
@@ -49,7 +49,13 @@ const Music = () => {
     >
       <div className="filters">
         {genres.map((genre) => {
-          return <Filter genre={genre} setSelectedGenre={setSelectedGenre} key={genre} />;
+          return (
+            <Filter
+              genre={genre}
+              setSelectedGenre={setSelectedGenre}
+              key={genre}
+            />
+          );
         })}
       </div>
 
@@ -62,7 +68,7 @@ const Music = () => {
               track.fields.Genre.includes(selectedGenre)
           )
           .map((track) => (
-            <Article track={track} key={track.id}/>
+            <Article track={track} key={track.id} />
           ))}
       </div>
     </motion.div>

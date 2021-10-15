@@ -8,25 +8,23 @@ const Login = () => {
   const [isSignedIn, setIsSignedIn] = useState(false);
 
   useEffect(() => {
-  firebase.auth().onAuthStateChanged((user) => {
+    firebase.auth().onAuthStateChanged((user) => {
       // "!!" permet de vérifier que la variable user contient quelque chose
-    setIsSignedIn(!!user);
-    console.log(user)
-  });
-}, []);
+      setIsSignedIn(!!user);
+      console.log(user);
+    });
+  }, []);
 
   if (isSignedIn === true) {
     return (
       <span className="login-container">
-      <Connected/>
+        <Connected />
       </span>
     );
-  } 
-  
-  else {
+  } else {
     return (
       <span className="login-container">
-      <Signin />
+        <Signin />
       </span>
     );
   }
