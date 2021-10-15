@@ -6,6 +6,8 @@ Application musicale réalisée avec React, Airtable (en guise de base de donné
 - possibilité de trier les morceaux par genre sans recharger la page
 - création de plusieurs composants ("Navigation", "Footer" etc...)
 - création de routes dynamiques (basées sur l'ID) permettant d'afficher les données d'un seul morceau
+- utilisation de différents hooks React (useState, useEffect, useHistory..)
+- implantation de Firebase afin de gérer la connexion (Google, Facebook) + redirection
 - mise en place d'un preloader (gif) avant d'afficher la homepage
 - utilisation de la bibliothèque "framer motion" pour gérer les transitions entre les pages
 - ajout d'un favicon personnalisé
