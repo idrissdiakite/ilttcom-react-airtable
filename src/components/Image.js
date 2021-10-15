@@ -28,18 +28,17 @@ const Image = () => {
       transition={transition}
     >
       {images.map((image) => (
-        <div class="container">
-          <div class="image">
+        <div className="container" key={image.id}>
+          <div className="image">
             <img
               src={image.fields.Attachments[0].url}
               alt={image.fields.Name}
-              key={image.id}
               loading="lazy"
             />
           </div>
-          <div class="image-hover">
-            <div class="text-hover">
-              <span class="text-title">{image.fields.Name}</span>
+          <div className="image-hover">
+            <div className="text-hover">
+              <span className="text-title">{image.fields.Name}</span>
             </div>
           </div>
         </div>

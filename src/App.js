@@ -6,6 +6,7 @@ import Login from "./pages/Login";
 import Track from "./pages/Track";
 import Gallery from "./pages/Gallery";
 import NotFound from "./pages/NotFound";
+import Connected from "./components/Connexion/Connected";
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/connexion" exact component={Login} />
+          <Route path="/profile" exact component={Connected} />
           <Route path="/track" exact component={Track} />
           <Route path="/track/:id" component={Track} />
           <Route path="/gallerie" component={Gallery} />

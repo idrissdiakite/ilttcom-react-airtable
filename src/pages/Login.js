@@ -9,9 +9,9 @@ const Login = () => {
 
   useEffect(() => {
   firebase.auth().onAuthStateChanged((user) => {
-      // permet de vérifier que la variable user contient quelque chose
+      // "!!" permet de vérifier que la variable user contient quelque chose
     setIsSignedIn(!!user);
-    // console.log(user)
+    console.log(user)
   });
 }, []);
 
