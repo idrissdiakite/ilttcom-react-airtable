@@ -36,6 +36,13 @@
 }
 
 .connected {
+  p {
+    margin-bottom: 2rem;
+    color: $color-4;
+  }
+  p:hover {
+    font-weight: 600;
+  }
   button {
     width: 150px;
     color: $color-1;
