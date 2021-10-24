@@ -36,4 +36,4 @@ Exemple: https://api.airtable.com/v0/ID_BASE/NOM_BASE?api_key=API_KEY
 
 ## 💫 Demo
 
-Vidéo de démonstration de l'application disponible [ici](https://drive.google.com/file/d/19XmZkntqQG8eKVYJceQT8wImXwHJabgT)
+Live: [https://ilttcom.netlify.app/](https://ilttcom.netlify.app).
