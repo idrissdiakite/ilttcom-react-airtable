@@ -34,6 +34,6 @@ Exemple: https://api.airtable.com/v0/ID_BASE/NOM_BASE?api_key=API_KEY
 - **npm i** pour installer les dépendances (nodes modules)
 - **npm start** pour lancer le projet
 
-## 💫 Demo
+## 💫 Live
 
-Live: [https://ilttcom.netlify.app/](https://ilttcom.netlify.app).
+[https://ilttcom.netlify.app/](https://ilttcom.netlify.app)
